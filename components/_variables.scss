@@ -1,8 +1,8 @@
 /*** Buttons ***/
-$button-background-disabled: #DFDFDF;
-$button-color: color("blue", "base") !default;
-$button-color-disabled: #9F9F9F;
-$button-color-flat: #343434;
+$button-background-disabled: #888888;
+$button-color: color("light-blue", "base") !default;
+$button-color-disabled: color("red", "darken-2") !default;
+$button-color-flat: #444444;
 $button-color-raised: #FFF;
 $button-floating-size: 37px !default;
 $button-height: 36px !default;
