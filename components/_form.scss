@@ -1,6 +1,6 @@
 /* Remove Focus Boxes */
 select:focus {
-  outline: 1px solid color("materialize-red", "lighten-4");
+  outline: 1px solid color("pink", "lighten-4");
 }
 button:focus {
   outline: none;
@@ -344,8 +344,9 @@ form p {
     position: absolute;
     right: 0;
     font-size: 23px;
-    @extend [class^="mdi-"];
-    @extend .mdi-navigation-arrow-drop-down:before;
+    font-family: 'bunzilla';
+      
+    content: '\e842';
   }
 }
 

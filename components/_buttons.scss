@@ -2,9 +2,7 @@
 .btn, .btn-flat {
   display: inline-block;
   height: $button-height;
-  margin-bottom: 15px;
   padding: 0 2rem;
-  @include border-radius(2px);
   line-height: $button-line-height;
   border:none;
   // Gets rid of tap active state
@@ -80,6 +78,13 @@
       line-height: $button-floating-size * 1.5;
     }
   }
+  &.btn-small {
+    width: $button-floating-size / 1.5;
+    height: $button-floating-size / 1.5;
+    i{
+      line-height: $button-floating-size / 1.5;
+    }
+  }
 }
 
 // Flat button
@@ -90,6 +95,7 @@
   cursor: pointer;
 
   &.disabled {
+    cursor: not-allowed;
     color: lighten(#999, 10%);
   }
 }
