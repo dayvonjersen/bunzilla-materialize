@@ -396,27 +396,32 @@ input[type=range] + .thumb {
   height: 0;
   width: 0;
   border-radius: 50%;
-  background-color: $fill-color;
+  //background-color: $fill-color;
   top: 10px;
   margin-left: -6px;
 
+    display: inline-block;
+    text-align: center;
+    
   @include transform-origin(50% 50%);
   @include transform(rotate(-45deg));
 
   .value {
     display: block;
-    width: 30px;
+    width: 50%;
+      margin: auto;
+      
     text-align: center;
-    color: $fill-color;
+    color: inherit;
     font-size: 0px;
-    @include transform(rotate(45deg));
+    //@include transform(rotate(45deg));
   }
 
   &.active {
     border-radius: 50% 50% 50% 0;
 
     .value {
-      color: #fff;
+      //color: #fff;
       margin-left: -1px;
       margin-top: 8px;
       font-size: 10px;
