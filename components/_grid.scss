@@ -1,17 +1,20 @@
+// container was too small
+// padding on columns should be optional
+// remember remember .col.gutter
 .container {
   padding: 0 $gutter-width;
   margin: 0 auto;
-  max-width: 1280px;
-  width: 90%;
+  //max-width: 1280px;
+  width: 95%;
 }
 @media #{$medium-and-up} {
   .container {
-    width: 85%;
+    width: 90%;
   }
 }
 @media #{$large-and-up} {
   .container {
-    width: 70%;
+    width: 80%;
   }
 }
 .container .row {
@@ -38,7 +41,7 @@
 .row {
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 20px;
+  margin-bottom: 0;
 
   // Clear floating children
   &:after {
@@ -51,7 +54,9 @@
     @include transition(all .3s);
     float: left;
     @include box-sizing(border-box);
-    padding: 0 $gutter-width / 2;
+    &.gutter {
+        padding: 0 $gutter-width / 2;
+    }
 
     $i: 1;
     @while $i <= $num-cols {

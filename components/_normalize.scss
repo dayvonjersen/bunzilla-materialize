@@ -17,9 +17,6 @@ html {
  */
 
 body {
-    /**
-     * add it back */
-  margin: 1em;
 }
 
 /* HTML5 display definitions
@@ -230,7 +227,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: 'scp', monospace, monospace;
   font-size: 1em;
 }
 
@@ -301,7 +298,7 @@ input[type="submit"] {
 
 button[disabled],
 html input[disabled] {
-  cursor: default;
+  cursor: not-allowed;
 }
 
 /**

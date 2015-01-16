@@ -18,8 +18,8 @@ $card-bg-color: #fff !default;
 
 /*** Collapsible ***/
 $collapsible-height: 3rem !default;
-$collapsible-header-color: #fff !default;
-$collapsible-border-color: #ddd !default;
+$collapsible-header-color: transparent !default;
+$collapsible-border-color: transparent !default;
 
 /*** Forms ***/
 // Text Inputs + Textarea
@@ -29,7 +29,7 @@ $label-font-size: .8rem !default;
 
 // Radio Buttons
 $disabled-color: rgba(0,0,0, .26) !default;
-$fill-color: color('pink','darken-2') !default;
+$fill-color: color('pink','darken-1') !default;
 $radio-border: #5a5a5a !default;
 
 
@@ -71,17 +71,18 @@ $sidenav-width: 240px;
 /*** Toasts ***/
 $toast-height: 48px !default;
 $toast-color: #323232 !default;
-$toast-text-color: #fff !default;
+$toast-text-color: #ffff55 !default;
 
 /*** Typography ***/
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
-$h1-fontsize: 4.2rem !default;
-$h2-fontsize: 3.56rem !default;
-$h3-fontsize: 2.92rem !default;
-$h4-fontsize: 2.28rem !default;
-$h5-fontsize: 1.64rem !default;
-$h6-fontsize: 1rem !default;
+/* WAY TOO FUCKING BIG */
+$h1-fontsize: 2.1rem !default;
+$h2-fontsize: 1.78rem !default;
+$h3-fontsize: 1.46rem !default;
+$h4-fontsize: 1.14rem !default;
+$h5-fontsize: 0.82rem !default;
+$h6-fontsize: 0.5rem !default;
 
 // Flowtext
 $range : $large-screen - $small-screen !default;

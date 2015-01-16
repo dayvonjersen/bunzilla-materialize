@@ -51,7 +51,6 @@
 }
 
 html, body {
-    margin: 0;
     letter-spacing: -0.07em;
     height: 100%;
 }
@@ -59,6 +58,8 @@ html, body {
 html {
  box-sizing: border-box;
  position: relative;
+    
+    margin: 0;
 }
 
 *, *:before, *:after {
@@ -66,7 +67,7 @@ html {
 }
 
 body {
-    margin-bottom: 150px;
+    margin: 1em 1em 150px 1em;
 }
 
 main {
@@ -551,6 +552,13 @@ span.badge {
     background: transparent;
 }
 
+.small {
+    font-size: x-small;
+}
+
+.large {
+    font-size: x-large;
+}
 
 
 // No Text Select
