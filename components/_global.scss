@@ -13,32 +13,43 @@
     color: #fff;
 }
 
+html, body {
+    margin: 0;
+    letter-spacing: -0.07em;
+    height: 100%;
+}
+
 html {
  box-sizing: border-box;
+ position: relative;
 }
+
 *, *:before, *:after {
  box-sizing: inherit;
 }
 
 body {
-  // display: flex;
-  // min-height: 100vh;
-  // flex-direction: column;
-  margin-bottom: 190px;
 }
 
 main {
   // flex: 1 0 auto;
 }
 
-ul {
+ul[class], ul[class] li {
+    padding: 0;
 	list-style-type: none;
 }
 
 a {
-	color: color("blue", "darken-1");
-	text-decoration: none;
+	color: color("light-blue", "darken-1");
+	text-decoration: underline;
 }
+
+a:hover {
+    color: color("light-blue", "base");
+    text-decoration: none;
+}
+
 
 
 // Positioning
@@ -50,14 +61,6 @@ a {
   .valign {
     display: block;
   }
-}
-
-
-ul {
-  padding: 0;
-}
-li {
-  list-style-type: none;
 }
 
 // Z-levels
@@ -93,14 +96,14 @@ li {
 //  Blockquote
 
 blockquote {
-  margin: 20px 0;
-  padding-left: 1.5rem;
-  border-left: 5px solid color("red", "lighten-3");
+  margin: 0 1rem;
+  padding: 1.5rem;
+  border-left: 5px currentColor dotted;
 }
 
 // Icon Styles
 
-i {
+i[class*='icon-'] {
   line-height: inherit;
 
   &.left {
@@ -130,6 +133,7 @@ img.responsive-img {
 
 
 // parallax
+/** don't need
 .parallax-container {
   position: relative;
   overflow: hidden;
@@ -164,7 +168,7 @@ img.responsive-img {
     }
   }
 }
-
+*/
 
 // Pushpin
 .pin-top, .pin-bottom {
@@ -282,10 +286,92 @@ td, th{
   display: table-cell;
   text-align: left;
   vertical-align: middle;
-  border-radius: 2px;
+  //border-radius: 2px;
+}
+
+// Responsive Table
+@media #{$medium-and-down} {
+    
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        display: bllock;
+        position: relative;
+        
+        th, td {
+            margin: 0;
+            vertical-align: top;
+        }
+        
+        th { text-align: left; }
+        
+        thead {
+            display: block;
+            float: left;
+            
+            tr {
+                display: block;
+                padding: 0 10px 0 0;
+            }
+        }
+        
+        tbody {
+            display: block;
+            width: auto;
+            position: relative;
+            overflow-x: auto;
+            white-space: nowrap;
+            
+            tr {
+                display: inline-block;
+                vertical-align: top;
+            }
+        }
+        
+        th {
+            display: block;
+            text-align: right;
+        }
+        
+        td {
+            display: block;
+            min-height: 1.25em;
+            text-align: left;
+        }
+        
+        tr {
+            padding: 0 10px;
+        }
+        
+        thead {
+            border: 0;
+            border-right: 1px solid $table-border-color;   
+        }
+        
+        &.bordered {
+            th { 
+                border-bottom: 0;
+                border-left: 0;
+            }
+            td {
+                border-left: 0;
+                border-right: 0;
+                border-bottom: 0;
+            }
+            tr {
+                border: 0;
+            }
+            tbody tr {
+                border-right: 1px solid $table-border-color;
+            }
+        }
+    }
+    
 }
 
 // Collections
+/** don't need this either
 .collection {
   background-color: $collection-bg-color;
   margin: $element-top-margin 0 $element-bottom-margin 0;
@@ -358,7 +444,7 @@ td, th{
   }
 
 }
-
+**/
 // Badges
 span.badge {
   min-width: 3rem;
@@ -366,11 +452,11 @@ span.badge {
   text-align: center;
   font-size: 1rem;
   line-height: inherit;
-  color: color('grey', 'darken-1');
-  float: right;
+//  color: color('grey', 'darken-1');
+//  float: right;
   @include box-sizing(border-box);
 
-  &.new {
+  /*&.new {
     font-weight: 300;
     font-size: 0.8rem;
     color: #fff;
@@ -387,7 +473,7 @@ span.badge {
   }
   &.tag:after {
     content: attr(data-title);
-  }
+  }*/
 }
 
 /*******************
@@ -395,10 +481,10 @@ span.badge {
 *******************/
 
 // Text Align
-.left-align {
+.left-align, .align-left {
   text-align: left;
 }
-.right-align {
+.right-align, .align-left {
   text-align: right
 }
 .center, .center-align {
@@ -406,10 +492,10 @@ span.badge {
 }
 
 .left {
-  float: left !important;
+  float: left;
 }
 .right {
-  float: right !important;
+  float: right;
 }
 
 // No Text Select
