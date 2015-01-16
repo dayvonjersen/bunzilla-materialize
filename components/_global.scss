@@ -13,6 +13,10 @@
     color: #fff;
 }
 
+:target {
+    outline: 1px color('light-blue', 'lighten-1') dotted;
+}
+
 html, body {
     margin: 0;
     letter-spacing: -0.07em;
@@ -29,6 +33,7 @@ html {
 }
 
 body {
+    margin-bottom: 150px;
 }
 
 main {
@@ -227,7 +232,7 @@ img.responsive-img {
   bottom: 0;
   width: 100%;
     
-  margin-top: 20px;
+  margin: 0;
   padding-top: 20px;
   height: 150px;
 }
@@ -474,6 +479,17 @@ span.badge {
   &.tag:after {
     content: attr(data-title);
   }*/
+    
+  &.status {
+      padding: 0.5em 2px;
+  }
+    
+  &.tag, &.priority {
+      padding: 2px;
+      font-size: x-small;
+  }
+    
+    
 }
 
 /*******************
@@ -497,6 +513,12 @@ span.badge {
 .right {
   float: right;
 }
+
+.transparent {
+    background: transparent;
+}
+
+
 
 // No Text Select
 .no-select {
