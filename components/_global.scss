@@ -13,8 +13,41 @@
     color: #fff;
 }
 
+// cameras ready prepare to flash
+@-moz-keyframes fadeIn  {
+0% {
+    box-shadow: 0 0 10px 1000px #FFFFFF;
+    opacity: 0.98;
+}
+100% {
+    box-shadow: none;
+    opacity: 1;
+}
+}
+@-webkit-keyframes fadeIn { 
+0% {
+    box-shadow: 0 0 10px 1000px #FFFFFF;
+    opacity: 0.98;
+}
+100% {
+    box-shadow: none;
+    opacity: 1;
+}
+}
+@keyframes fadeIn {
+0% {
+    box-shadow: 0 0 10px 1000px #FFFFFF;
+    opacity: 0.98;
+}
+100% {
+    box-shadow: none;
+    opacity: 1;
+}
+}
 :target {
-    outline: 1px color('light-blue', 'lighten-1') dotted;
+    -webkit-animation: 1s cubic-bezier(0.8, 0, 0.2, 1) 0s normal none 1 fadeIn;
+    -moz-animation: 1s cubic-bezier(0.8, 0, 0.2, 1) 0s normal none 1 fadeIn;
+    animation: 1s cubic-bezier(0.8, 0, 0.2, 1) 0s normal none 1 fadeIn;
 }
 
 html, body {
