@@ -79,13 +79,13 @@ $toast-text-color: #ffff55 !default;
 /*** Typography ***/
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
-/* WAY TOO FUCKING BIG */
-$h1-fontsize: 2.1rem !default;
-$h2-fontsize: 1.78rem !default;
-$h3-fontsize: 1.46rem !default;
-$h4-fontsize: 1.14rem !default;
-$h5-fontsize: 0.82rem !default;
-$h6-fontsize: 0.5rem !default;
+
+$h1-fontsize: 3rem !default;
+$h2-fontsize: 2rem !default;
+$h3-fontsize: 1rem !default;
+$h4-fontsize: 1rem !default;
+$h5-fontsize: 1rem !default;
+$h6-fontsize: 1rem !default;
 
 // Flowtext
 $range : $large-screen - $small-screen !default;
