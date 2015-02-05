@@ -21,6 +21,9 @@
 
 .toast {
   @extend .z-depth-1;
+  @extend .no-select;
+  cursor: -moz-grab;
+  cursor: grab;
   @include border-radius(2px);
   @include box-sizing(border-box);
   top: 0px;
@@ -40,7 +43,11 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-
+  
+  &:active {
+    cursor: -moz-grabbing;
+    cursor: grabbing;
+  }
   .btn, .btn-flat {
     margin: 0;
     margin-left: 3rem;

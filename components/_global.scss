@@ -3,6 +3,10 @@
 
 //Default styles
 
+*, *:before, *:after {
+ box-sizing: inherit;
+}
+
 ::selection {
     background: #4eb3de;
     color: #fff;
@@ -13,60 +17,35 @@
     color: #fff;
 }
 
-// cameras ready prepare to flash
-@-moz-keyframes fadeIn  {
-0% {
-    box-shadow: 0 0 10px 1000px #FFFFFF;
-    opacity: 0.98;
-}
-100% {
-    box-shadow: none;
-    opacity: 1;
-}
-}
-@-webkit-keyframes fadeIn { 
-0% {
-    box-shadow: 0 0 10px 1000px #FFFFFF;
-    opacity: 0.98;
-}
-100% {
-    box-shadow: none;
-    opacity: 1;
-}
-}
-@keyframes fadeIn {
-0% {
-    box-shadow: 0 0 10px 1000px #FFFFFF;
-    opacity: 0.98;
-}
-100% {
-    box-shadow: none;
-    opacity: 1;
-}
-}
-:target {
-    -webkit-animation: 1s cubic-bezier(0.8, 0, 0.2, 1) 0s normal none 1 fadeIn;
-    -moz-animation: 1s cubic-bezier(0.8, 0, 0.2, 1) 0s normal none 1 fadeIn;
-    animation: 1s cubic-bezier(0.8, 0, 0.2, 1) 0s normal none 1 fadeIn;
-}
-
 html, body {
     letter-spacing: -0.07em;
     height: 100%;
 }
 
 html {
- box-sizing: border-box;
-    
+    box-sizing: border-box;
     margin: 0;
-}
-
-*, *:before, *:after {
- box-sizing: inherit;
+    overflow-x: hidden;
+    overflow-x: -moz-hidden-unscrollable;
 }
 
 body {
-    margin: 60px 1em 150px 1em;
+    margin: 60px 0 0 0;
+}
+
+#page-wrap {
+    min-height: 100%;
+    margin-bottom: -150px;
+}
+
+#page-wrap::after {
+    content: "";
+    display: block;
+}
+
+body > footer, #page-wrap::after {
+    padding: 0;
+    height: 150px;
 }
 
 main {
@@ -79,16 +58,9 @@ ul[class], ul[class] li {
 }
 
 a {
-	color: color("light-blue", "darken-1");
+	color: currentColor;
 	text-decoration: underline;
 }
-
-a:hover {
-    color: color("light-blue", "base");
-    text-decoration: none;
-}
-
-
 
 // Positioning
 .valign-wrapper {
@@ -134,8 +106,10 @@ a:hover {
 //  Blockquote
 
 blockquote {
+  width: calc(100% - 3em);
+  padding: 0 0.5rem 1rem 0.5rem;
+  overflow-x: auto;
   margin: 0 1rem;
-  padding: 1.5rem;
   border-left: 5px currentColor dotted;
 }
 
@@ -254,16 +228,6 @@ img.responsive-img {
   @media #{$small-and-down} {
     text-align: center;
   }
-}
-
-
-// Footer
-
-.footer {
-  background: #111;
-    
-  padding-top: 20px;
-  height: 150px;
 }
 
 // Tables
@@ -515,7 +479,7 @@ span.badge {
     
   &.tag, &.priority {
       padding: 2px;
-      font-size: x-small;
+      font-size: $h6-fontsize;
   }
     
     
@@ -548,11 +512,11 @@ span.badge {
 }
 
 .small {
-    font-size: x-small;
+    font-size: $h6-fontsize;
 }
 
 .large {
-    font-size: x-large;
+    font-size: $h2-fontsize;
 }
 
 .gone {

@@ -80,16 +80,16 @@ $toast-text-color: #ffff55 !default;
 $off-black: rgba(0, 0, 0, 0.87) !default;
 // Header Styles
 
-$h1-fontsize: 3rem !default;
-$h2-fontsize: 2rem !default;
-$h3-fontsize: 1rem !default;
+$h1-fontsize: 2.222rem !default;
+$h2-fontsize: 1.778rem !default;
+$h3-fontsize: 1.333rem !default;
 $h4-fontsize: 1rem !default;
-$h5-fontsize: 1rem !default;
-$h6-fontsize: 1rem !default;
+$h5-fontsize: 0.8889rem !default;
+$h6-fontsize: 0.6667rem !default;
 
 // Flowtext
 $range : $large-screen - $small-screen !default;
-$intervals: 20 !default;
+$intervals: 40 !default;
 $interval-size: $range / $intervals !default;
 
 /*** Collections ***/

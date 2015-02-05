@@ -1,7 +1,7 @@
 @font-face
 {
     font-family: 'scp';
-    src: url('../css/font/SourceCodePro-Light.woff');
+    src: url('font/SourceCodePro-Light.woff');
 }
 
 a {
@@ -27,7 +27,7 @@ html{
   font-weight: normal;
   color: #444;
 
-  background-image: url(../css/idk-w.png); 
+  background-image: url("img/idk-w.png"); 
   background-repeat: no-repeat; 
   background-size: cover;
   background-attachment: fixed;

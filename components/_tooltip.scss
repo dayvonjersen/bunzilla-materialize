@@ -1,11 +1,11 @@
 .material-tooltip {
-    padding: 10px 8px;
-    font-size: 1rem;
+    padding: 0.3333em 1em;
+    font-size: $h5-fontsize;
     z-index: 1000;
     background-color: transparent;
     @include border-radius(2px);
     color: #fff;
-    min-height: 36px;
+    //min-height: 36px;
     line-height: 1rem;
     // max-width: 350px;
     opacity: 0;
@@ -26,7 +26,7 @@
   height: 7px;
   width: 14px;
   @include border-radius(0 0 14px 14px);
-  background-color: #323232;
+  background-color: #222;
   z-index: -1;
   @include transform-origin( 50% 10%);
 
